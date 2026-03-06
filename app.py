@@ -17,11 +17,7 @@ def index():
 @app.route("/submit", methods=['POST'])
 def submit():
         form_data = {
-                'name': request.form.get('name'),
-                'age': request.form.get('age'),
-                'hobby': request.form.get('favorite_hobby'),
-                'color': request.form.get('favorite_color'),
-                'lucky': request.form.get('lucky_number')
+                'middle_name': request.form.get('middle_name'),
         }
 
         return render_template("results.html", form_data=form_data)
