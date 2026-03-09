@@ -2,12 +2,24 @@
 <html>
 
 <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href ="{{ url_for('static', filename='style.css')}}" </head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href ="{{ url_for('static', filename='style.css')}}" >
+    
+</head>
 
-        <body>
-            <h1>RESULTS</h1>
-            <a href ="/">Back</a>
-        </body>
+<body>
+
+    {% if points >= 3 %}
+    <h1>WONDERFULLY DONE~! You have passed the Bryce test. You are a TRUE Brycer.</h1>
+
+    {% else %} 
+    <h1> You lost.</h1>
+    {% endif %}
+    
+    <a href ="/">Back</a>
+</body>
+
+
 
 </html>
+
